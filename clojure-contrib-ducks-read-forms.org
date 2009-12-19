@@ -1,0 +1,10 @@
+#+TITLE: Teaching duck-streams to Read Clojure Forms
+
+The [[http://github.com/bpsm/clojure-contrib/commits/ducks-read-forms][ducks-read-forms]] branch of *clojure-contrib* is my defines the
+function =read-forms=  making it convenient to use clojure syntax for
+pure data as an alternative to JSON, XML, property files and the like.
+
+(I'm using this for some export-and-munge data processing because I've
+found it's easier to generate syntactically correct Clojure than JSON.)
+
+

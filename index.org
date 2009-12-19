@@ -1,0 +1,7 @@
+#+TITLE: BPSM on GitHub
+
+I'm a Software developer living and working in Vienna, Austria. I'm a
+generalist by nature, exploring new languges, tools and ways of
+thinking for the occasional nugget.
+
+[[file:sitemap.org][sitemap]]

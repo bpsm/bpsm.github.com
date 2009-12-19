@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Teaching duck-streams About Bytes</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2009-12-19 21:18:15 CET"/>
+<meta name="author" content="B. Smith-Mannschott"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style><link rel="stylesheet" type="text/css" href="org.css">
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">Teaching duck-streams About Bytes</h1>
+
+<p>The <a href="http://github.com/bpsm/clojure-contrib/tree/ducks-byte">ducks-byte</a> branch of <b>clojure-contrib</b> is my attempt to teach
+duck-streams to be as convenient for byte streams as it now is for
+textual streams.
+</p>
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">Features </a></li>
+<li><a href="#sec-2">Open Questions </a>
+<ul>
+<li><a href="#sec-2.1">Where to buffer </a></li>
+<li><a href="#sec-2.2"><code>*buffer-size*</code> </a></li>
+<li><a href="#sec-2.3">teaching input-stream to try the CLASSPATH </a></li>
+<li><a href="#sec-2.4"><code>*append-to-writer*</code> renamed </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Features </h2>
+<div class="outline-text-2" id="text-1">
+
+
+<ul>
+<li>
+input-stream is like reader, except for bytes.
+</li>
+<li>
+output-stream is like writer, except for bytes.
+
+</li>
+<li>
+reader and writer now build on input-stream and output-stream
+where appropriate.
+
+</li>
+<li>
+I've taught input-stream to also try the CLASSPATH when given a
+String doesn't specify a File or a URL.
+
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Open Questions </h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+</div>
+
+<div id="outline-container-2.1" class="outline-3">
+<h3 id="sec-2.1">Where to buffer </h3>
+<div class="outline-text-3" id="text-2.1">
+
+
+<p>
+The current implementation goes to pains to buffer only once,
+reasoning that buffering at both the InputStream and Reader levels
+when opening a Reader is wasteful and that it's best to buffer at
+the top of the stack (i.e. a BufferedReader on a plain
+InputStream). However, this design choice may be based on an
+incorrect assumption:
+</p>
+<blockquote>
+
+<p>We use a BufferedInputStream with a 128k buffer to increase the
+number of bytes we’re reading from the disk at a time. The reason
+we can’t just give the BufferedReader a large buffer is that
+InputStreamReader reads in 8192 byte blocks so we really need that
+buffer at the byte level.
+</p>
+<p>
+<a href="http://meshy.org/2009/12/13/widefinder-2-with-clojure.html">Wide-Finder 2 with Clojure</a>.
+</p>
+</blockquote>
+
+
+<p>
+Reading the source of InputStreamReader confirms
+this. InputStreamReader uses a NIO StreamDecoder to do the actual
+byte to character translation and this StreamDecoder is always
+created with DEFAULT_BYTE_BUFFER_SIZE of 8192.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.2" class="outline-3">
+<h3 id="sec-2.2"><code>*buffer-size*</code> </h3>
+<div class="outline-text-3" id="text-2.2">
+
+
+<p>
+I've given <code>*buffer-size*</code> a larger role. Some might say I've
+overloaded its meaning. Some might consider that bad. Previously
+this var had only one role: determining the size of the byte or
+char array used by copy. Now I use it to determine the size of the
+buffer when allocating Buffered streams, readers and
+writers. Previously Java's default buffer size was used. Also, we
+give back a plain InputStream instead of a BuffferedInputStream
+when buffer-size is bound to 0.
+</p>
+<p>
+The default buffer-size is 1024. That seems rather small. Wouldn't
+it make sense to at least make it as large as the most common file
+system block size (4096)?
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.3" class="outline-3">
+<h3 id="sec-2.3">teaching input-stream to try the CLASSPATH </h3>
+<div class="outline-text-3" id="text-2.3">
+
+
+<p>
+Calls which previously would have failed (because no such file
+existed) might now succeed because a resource of the same name
+happens to exist on the CLASSPATH. Is this acceptable?
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2.4" class="outline-3">
+<h3 id="sec-2.4"><code>*append-to-writer*</code> renamed </h3>
+<div class="outline-text-3" id="text-2.4">
+
+
+<p>
+This might be a compatibility issue for clients that did not heed
+the advice given in documentation to use append-writer or
+append-spit instead of directly binding this var.
+</p></div>
+</div>
+</div>
+<div id="postamble">
+<p class="date"> Date: 2009-12-19 21:18:15 CET</p>
+</div>
+</div>
+</body>
+</html>
