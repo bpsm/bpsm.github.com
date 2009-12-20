@@ -7,6 +7,7 @@ textual streams.
 * Features
 
 - input-stream is like reader, except for bytes.
+
 - output-stream is like writer, except for bytes.
 
 - reader and writer now build on input-stream and output-stream
@@ -16,45 +17,6 @@ textual streams.
   String doesn't specify a File or a URL.
 
 * Open Questions
-
-*** Where to buffer
-
-The current implementation goes to pains to buffer only once,
-reasoning that buffering at both the InputStream and Reader levels
-when opening a Reader is wasteful and that it's best to buffer at
-the top of the stack (i.e. a BufferedReader on a plain
-InputStream). However, this design choice may be based on an
-incorrect assumption:
-
-#+BEGIN_QUOTE
-We use a BufferedInputStream with a 128k buffer to increase the
-number of bytes we’re reading from the disk at a time. The reason
-we can’t just give the BufferedReader a large buffer is that
-InputStreamReader reads in 8192 byte blocks so we really need that
-buffer at the byte level.
-
-[[http://meshy.org/2009/12/13/widefinder-2-with-clojure.html][Wide-Finder 2 with Clojure]].
-#+END_QUOTE
-
-Reading the source of InputStreamReader confirms
-this. InputStreamReader uses a NIO StreamDecoder to do the actual
-byte to character translation and this StreamDecoder is always
-created with DEFAULT_BYTE_BUFFER_SIZE of 8192.
-
-*** =*buffer-size*=
-
-I've given =*buffer-size*= a larger role. Some might say I've
-overloaded its meaning. Some might consider that bad. Previously
-this var had only one role: determining the size of the byte or
-char array used by copy. Now I use it to determine the size of the
-buffer when allocating Buffered streams, readers and
-writers. Previously Java's default buffer size was used. Also, we
-give back a plain InputStream instead of a BuffferedInputStream
-when buffer-size is bound to 0.
-
-The default buffer-size is 1024. That seems rather small. Wouldn't
-it make sense to at least make it as large as the most common file
-system block size (4096)?
 
 *** teaching input-stream to try the CLASSPATH
 
@@ -67,3 +29,4 @@ happens to exist on the CLASSPATH. Is this acceptable?
 This might be a compatibility issue for clients that did not heed
 the advice given in documentation to use append-writer or
 append-spit instead of directly binding this var.
+
