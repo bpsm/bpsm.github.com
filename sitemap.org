@@ -1,5 +1,0 @@
-#+TITLE: Index for project bpsm.github.com
-
-   + [[file:clojure-contrib-ducks-byte.org][Teaching duck-streams About Bytes]]
-   + [[file:clojure-contrib-ducks-read-forms.org][Teaching duck-streams to Read Clojure Forms]]
-   + [[file:index.org][BPSM on GitHub]]

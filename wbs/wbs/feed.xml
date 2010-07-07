@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:A20C84B0-6F6F-4CB8-BABE-7E5D692EEECE</id>
+ <title>Page list Atom feed</title>
+ <updated>2010-07-07T20:03:26+02:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:C30B903B-03BF-48AF-BE79-5A51E947C2E6</id>
+  <title>Welcome</title>
+  <title xmlns="urn:iweb:">Welcome</title>
+  <in-navbar xmlns="urn:iweb:">C30B903B-03BF-48AF-BE79-5A51E947C2E6</in-navbar>
+  <link rel="alternate" href="Welcome.html"/>
+  <updated>2010-07-07T20:03:26.001+02:00</updated>
+  <content>Welcome</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:974D6953-DC16-40D2-9058-7954A5C2C099</id>
+  <title>Photos</title>
+  <title xmlns="urn:iweb:">Photos</title>
+  <in-navbar xmlns="urn:iweb:">974D6953-DC16-40D2-9058-7954A5C2C099</in-navbar>
+  <link rel="alternate" href="Photos.html"/>
+  <updated>2010-07-07T20:03:26.002+02:00</updated>
+  <content>Photos</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:44CEDC90-6B09-4AF3-B586-81C8A20CEB5A</id>
+  <title>Elisabeth</title>
+  <title xmlns="urn:iweb:">Elisabeth</title>
+  <in-navbar xmlns="urn:iweb:">44CEDC90-6B09-4AF3-B586-81C8A20CEB5A</in-navbar>
+  <link rel="alternate" href="Elisabeth.html"/>
+  <updated>2010-07-07T20:03:26.003+02:00</updated>
+  <content>Elisabeth</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:F97E19EE-DBF0-4A5F-8542-DFC45DE8A739</id>
+  <title>Ben</title>
+  <title xmlns="urn:iweb:">Ben</title>
+  <in-navbar xmlns="urn:iweb:">F97E19EE-DBF0-4A5F-8542-DFC45DE8A739</in-navbar>
+  <link rel="alternate" href="Ben.html"/>
+  <updated>2010-07-07T20:03:26.004+02:00</updated>
+  <content>Ben</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:7671A402-C545-47AE-8437-7823B99A247B</id>
+  <title>Katrina</title>
+  <title xmlns="urn:iweb:">Katrina</title>
+  <in-navbar xmlns="urn:iweb:">7671A402-C545-47AE-8437-7823B99A247B</in-navbar>
+  <link rel="alternate" href="Katrina.html"/>
+  <updated>2010-07-07T20:03:26.005+02:00</updated>
+  <content>Katrina</content>
+ </entry>
+ <entry>
+  <id>urn:iweb:F88C122D-38ED-4C10-9787-730999247580</id>
+  <title>Program</title>
+  <title xmlns="urn:iweb:">Program</title>
+  <in-navbar xmlns="urn:iweb:">F88C122D-38ED-4C10-9787-730999247580</in-navbar>
+  <link rel="alternate" href="Program.html"/>
+  <updated>2010-07-07T20:03:26.006+02:00</updated>
+  <content>Program</content>
+ </entry>
+</feed>

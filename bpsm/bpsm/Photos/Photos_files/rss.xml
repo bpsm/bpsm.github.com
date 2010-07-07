@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:iphoto="urn:iphoto:property" xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>Photos</title>
+    <link>http://bpsm.github.com/bpsm/bpsm/Photos/Photos.html</link>
+    <description>Photos</description>
+    <item>
+      <title>Irene</title>
+      <link>http://bpsm.github.com/bpsm/bpsm/Photos/Pages/Irene.html</link>
+      <guid isPermaLink="false">2fb53f6b-64b1-4898-9ffe-5e53d00417fc</guid>
+    </item>
+  </channel>
+</rss>
