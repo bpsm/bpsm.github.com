@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
  <id>urn:iweb:C8D1E2C8-91C0-4F61-9CFE-F15F085AE1F9</id>
  <title>Page list Atom feed</title>
- <updated>2010-07-07T20:02:40+02:00</updated>
+ <updated>2010-07-07T20:06:51+02:00</updated>
  <link rel="self" href="feed.xml"/>
  <generator>iWeb</generator>
  <author>
@@ -14,7 +14,7 @@
   <title xmlns="urn:iweb:">Welcome</title>
   <in-navbar xmlns="urn:iweb:">17380525-BABE-427C-A292-74B80DB44916</in-navbar>
   <link rel="alternate" href="Welcome.html"/>
-  <updated>2010-07-07T20:02:40.001+02:00</updated>
+  <updated>2010-07-07T20:06:51.001+02:00</updated>
   <content>Welcome</content>
  </entry>
  <entry>
@@ -23,7 +23,7 @@
   <title xmlns="urn:iweb:">About Me</title>
   <in-navbar xmlns="urn:iweb:">6C9E9124-370E-498B-A478-E24FBCAC8A2B</in-navbar>
   <link rel="alternate" href="About_Me.html"/>
-  <updated>2010-07-07T20:02:40.002+02:00</updated>
+  <updated>2010-07-07T20:06:51.002+02:00</updated>
   <content>About Me</content>
  </entry>
  <entry>
@@ -32,7 +32,7 @@
   <title xmlns="urn:iweb:">Photos</title>
   <in-navbar xmlns="urn:iweb:">C8A6AB66-E196-4476-B84F-1B474EA2C7A4</in-navbar>
   <link rel="alternate" href="Photos/Photos.html"/>
-  <updated>2010-07-07T20:02:40.003+02:00</updated>
+  <updated>2010-07-07T20:06:51.003+02:00</updated>
   <content>Photos</content>
  </entry>
 </feed>

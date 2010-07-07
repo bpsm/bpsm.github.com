@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:iphoto="urn:iphoto:property" xmlns:iweb="http://www.apple.com/iweb" version="2.0">
+  <channel>
+    <title>Wesley B. Smith</title>
+    <link>http://bpsm.github.com/wbs/Program.html</link>
+    <description>Wesley B. Smith</description>
+    <item>
+      <link>http://bpsm.github.com/wbs/Program.html#0</link>
+      <guid isPermaLink="false">2a1f2c23-83f3-46d9-9144-fcba72aa8b3f</guid>
+      <enclosure url="http://bpsm.github.com/wbs/Program_files/Media/front_lg_1/front_lg_1.jpg" length="64308" type="image/jpeg"/>
+      <iphoto:thumbnail>http://bpsm.github.com/wbs/Program_files/Media/front_lg_1/thumb.jpg</iphoto:thumbnail>
+      <iweb:micro>http://bpsm.github.com/wbs/Program_files/Media/front_lg_1/micro.jpg</iweb:micro>
+      <iweb:richTitle>&lt;div style=&quot;padding: 0px; &quot; class=&quot;image_cluster_layout_style_default_External_180_28&quot;&gt;&lt;div class=&quot;image_cluster_layout_style_default&quot;/&gt;&lt;/div&gt;</iweb:richTitle>
+    </item>
+    <item>
+      <link>http://bpsm.github.com/wbs/Program.html#1</link>
+      <guid isPermaLink="false">f6f31d71-61da-4e67-8174-2187955fcd2a</guid>
+      <enclosure url="http://bpsm.github.com/wbs/Program_files/Media/front_lg_2/front_lg_2.jpg" length="110801" type="image/jpeg"/>
+      <iphoto:thumbnail>http://bpsm.github.com/wbs/Program_files/Media/front_lg_2/thumb.jpg</iphoto:thumbnail>
+      <iweb:micro>http://bpsm.github.com/wbs/Program_files/Media/front_lg_2/micro.jpg</iweb:micro>
+      <iweb:richTitle>&lt;div style=&quot;padding: 0px; &quot; class=&quot;image_cluster_layout_style_default_External_180_28&quot;&gt;&lt;div class=&quot;image_cluster_layout_style_default&quot;/&gt;&lt;/div&gt;</iweb:richTitle>
+    </item>
+    <item>
+      <link>http://bpsm.github.com/wbs/Program.html#2</link>
+      <guid isPermaLink="false">07f2fb11-2dc2-4834-9d02-f3be26a32dd8</guid>
+      <enclosure url="http://bpsm.github.com/wbs/Program_files/Media/front_lg_3/front_lg_3.jpg" length="79324" type="image/jpeg"/>
+      <iphoto:thumbnail>http://bpsm.github.com/wbs/Program_files/Media/front_lg_3/thumb.jpg</iphoto:thumbnail>
+      <iweb:micro>http://bpsm.github.com/wbs/Program_files/Media/front_lg_3/micro.jpg</iweb:micro>
+      <iweb:richTitle>&lt;div style=&quot;padding: 0px; &quot; class=&quot;image_cluster_layout_style_default_External_180_28&quot;&gt;&lt;div class=&quot;image_cluster_layout_style_default&quot;/&gt;&lt;/div&gt;</iweb:richTitle>
+    </item>
+    <item>
+      <link>http://bpsm.github.com/wbs/Program.html#3</link>
+      <guid isPermaLink="false">eec862ea-71ad-4d1f-b3c9-a8cf9ca993e0</guid>
+      <enclosure url="http://bpsm.github.com/wbs/Program_files/Media/back_lg_2/back_lg_2.jpg" length="178801" type="image/jpeg"/>
+      <iphoto:thumbnail>http://bpsm.github.com/wbs/Program_files/Media/back_lg_2/thumb.jpg</iphoto:thumbnail>
+      <iweb:micro>http://bpsm.github.com/wbs/Program_files/Media/back_lg_2/micro.jpg</iweb:micro>
+      <iweb:richTitle>&lt;div style=&quot;padding: 0px; &quot; class=&quot;image_cluster_layout_style_default_External_180_28&quot;&gt;&lt;div class=&quot;image_cluster_layout_style_default&quot;/&gt;&lt;/div&gt;</iweb:richTitle>
+    </item>
+    <item>
+      <link>http://bpsm.github.com/wbs/Program.html#4</link>
+      <guid isPermaLink="false">c7605cdc-f351-449c-bd3d-b0b3a77bee08</guid>
+      <enclosure url="http://bpsm.github.com/wbs/Program_files/Media/back_lg_3/back_lg_3.jpg" length="177868" type="image/jpeg"/>
+      <iphoto:thumbnail>http://bpsm.github.com/wbs/Program_files/Media/back_lg_3/thumb.jpg</iphoto:thumbnail>
+      <iweb:micro>http://bpsm.github.com/wbs/Program_files/Media/back_lg_3/micro.jpg</iweb:micro>
+      <iweb:richTitle>&lt;div style=&quot;padding: 0px; &quot; class=&quot;image_cluster_layout_style_default_External_180_28&quot;&gt;&lt;div class=&quot;image_cluster_layout_style_default&quot;/&gt;&lt;/div&gt;</iweb:richTitle>
+    </item>
+    <item>
+      <link>http://bpsm.github.com/wbs/Program.html#5</link>
+      <guid isPermaLink="false">4d35cd77-0ae7-4061-acbf-b33140767bc5</guid>
+      <enclosure url="http://bpsm.github.com/wbs/Program_files/Media/back_lg_1/back_lg_1.jpg" length="85807" type="image/jpeg"/>
+      <iphoto:thumbnail>http://bpsm.github.com/wbs/Program_files/Media/back_lg_1/thumb.jpg</iphoto:thumbnail>
+      <iweb:micro>http://bpsm.github.com/wbs/Program_files/Media/back_lg_1/micro.jpg</iweb:micro>
+      <iweb:richTitle>&lt;div style=&quot;padding: 0px; &quot; class=&quot;image_cluster_layout_style_default_External_180_28&quot;&gt;&lt;div class=&quot;image_cluster_layout_style_default&quot;/&gt;&lt;/div&gt;</iweb:richTitle>
+    </item>
+  </channel>
+</rss>
